@@ -6,7 +6,15 @@
 </head>
 <body>
 <h1>Results</h1>
-INSERT LOGIC
+<ul>
+  {% for card in results %}
+    <li>
+      {{ card.name }}, {{ card.colors }}
+    </li>
+  {% endfor %}
+</ul>
+
+
 <div>
     <h3>Navigation:</h3>
     <p> Please choose an action from the following options

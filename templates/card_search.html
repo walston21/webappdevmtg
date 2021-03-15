@@ -5,8 +5,15 @@
     <title>Magic The Gathering Card Finder - Search</title>
 </head>
 <body>
-<h1>Which card would you like to view?</h1>
-INSERT LOGIC
+<h1>Which card would you like to view? (Case-sensitive)</h1>
+
+<form action="{% url 'search_results' %}" method="get">
+    <table>
+        <tr><td>Card Name:</td><td><input name="q" value="{{ request.GET.q }}" type="text"></td></tr>
+        <tr><td><input name="submit" value="Search" class="button_1" type="submit"></td></tr>
+    </table>
+</form>
+
 <div>
     <h3>Navigation:</h3>
     <p> Please choose an action from the following options
